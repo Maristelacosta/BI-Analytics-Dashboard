@@ -2,29 +2,30 @@
 
 ## 📋 Sobre o Projeto
 
-Dashboard de Business Intelligence desenvolvido para análise de indicadores estratégicos e apoio à tomada de decisão.
+Dashboard de Business Intelligence desenvolvido para transformar dados em informações estratégicas e apoiar a tomada de decisão.
 
-O projeto utiliza Python, Pandas e Streamlit para transformar dados em informações visuais e insights de negócio.
+O projeto utiliza Python, Pandas e Streamlit para análise, processamento e visualização de indicadores de desempenho.
 
 ---
 
 ## 🎯 Objetivos
 
-- Monitorar indicadores de desempenho
-- Analisar tendências
-- Identificar oportunidades
-- Apoiar decisões estratégicas
+- Monitorar indicadores estratégicos
+- Gerar insights a partir dos dados
+- Apoiar tomada de decisão
+- Criar visualizações interativas
+- Facilitar análise gerencial
 
 ---
 
 ## ✅ Funcionalidades
 
-- KPIs em tempo real
-- Visualização gráfica
 - Dashboard interativo
+- Indicadores KPI
+- Visualização gráfica
 - Filtros dinâmicos
-- Indicadores de desempenho
-- Relatórios visuais
+- Relatórios analíticos
+- Análise de tendências
 
 ---
 
@@ -33,35 +34,28 @@ O projeto utiliza Python, Pandas e Streamlit para transformar dados em informaç
 - Python
 - Pandas
 - Streamlit
-- Plotly
 - SQL
+- Plotly
 
 ---
 
 ## 📈 Indicadores
 
 - Total de vendas
-- Crescimento mensal
 - Ticket médio
-- Receita por período
+- Receita mensal
+- Crescimento percentual
 - Desempenho por categoria
+- Evolução temporal dos resultados
 
 ---
 
 ## 🚀 Demonstração
 
-Acesse o dashboard:
-
-[Dashboard Online](SEU_LINK_STREAMLIT)
+Acesse o dashboard pelo link publicado.
 
 ---
 
 ## 👩‍💻 Desenvolvido por
 
 Maristela Costa
-
-Bacharel em Sistemas de Informação
-
-MBA em Cibersegurança e Proteção de Dados (em andamento)
-
-MBA em Business Intelligence, Big Data e Analytics (em andamento)
