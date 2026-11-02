@@ -140,3 +140,26 @@ st.markdown("---")
 st.markdown(
     "Projeto desenvolvido por Maristela Costa com Python, Pandas, Plotly e Streamlit."
 )
+
+# Gráfico de vendas por produto
+st.subheader("📊 Vendas por Produto")
+
+graf_produto = (
+    df_filtrado
+    .groupby("Produto")["Valor"]
+    .sum()
+    .reset_index()
+)
+
+fig1 = px.bar(
+    graf_produto,
+    x="Produto",
+    y="Valor",
+    color="Valor",
+    title="Faturamento por Produto"
+)
+
+st.plotly_chart(
+    fig1,
+    use_container_width=True
+)
