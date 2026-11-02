@@ -9,14 +9,14 @@ st.set_page_config(
     layout="wide"
 )
 
-# Carregamento dos dados
+# Carregar dados
 df = pd.read_csv("vendas.csv")
 
 # Título
 st.title("📊 BI Analytics Dashboard")
 st.subheader("Dashboard Executivo de Vendas")
 
-# Barra lateral
+# Filtro lateral
 st.sidebar.header("Filtros")
 
 regiao = st.sidebar.multiselect(
@@ -25,55 +25,66 @@ regiao = st.sidebar.multiselect(
     default=df["Regiao"].unique()
 )
 
-produto = st.sidebar.multiselect(
-    "Selecione o Produto",
-    options=df["Produto"].unique(),
-    default=df["Produto"].unique()
-)
-
-# Aplicação dos filtros
-df_filtrado = df[
-    (df["Regiao"].isin(regiao))
-    &
-    (df["Produto"].isin(produto))
-]
+df_filtrado = df[df["Regiao"].isin(regiao)]
 
 # KPIs
 faturamento = df_filtrado["Valor"].sum()
 quantidade = df_filtrado["Quantidade"].sum()
-
-if quantidade > 0:
-    ticket_medio = faturamento / quantidade
-else:
-    ticket_medio = 0
+ticket_medio = faturamento / quantidade
 
 col1, col2, col3 = st.columns(3)
 
-col1.metric(
-    "💰 Faturamento Total",
-    f"R$ {faturamento:,.2f}"
-)
-
-col2.metric(
-    "📦 Quantidade Vendida",
-    quantidade
-)
-
-col3.metric(
-    "📈 Ticket Médio",
-    f"R$ {ticket_medio:,.2f}"
-)
+col1.metric("💰 Faturamento Total", f"R$ {faturamento:,.2f}")
+col2.metric("📦 Quantidade Vendida", quantidade)
+col3.metric("📈 Ticket Médio", f"R$ {ticket_medio:,.2f}")
 
 st.markdown("---")
 
 # Gráfico de vendas por produto
-st.subheader("📊 Vendas por Produto")
-
 graf_produto = (
-    df_filtrado
-    .groupby("Produto")["Valor"]
+    df_filtrado.groupby("Produto")["Valor"]
     .sum()
     .reset_index()
 )
 
-fig1 
+fig1 = px.bar(
+    graf_produto,
+    x="Produto",
+    y="Valor",
+    color="Valor",
+    title="Vendas por Produto"
+)
+
+st.plotly_chart(fig1, use_container_width=True)
+
+# Gráfico por região
+graf_regiao = (
+    df_filtrado.groupby("Regiao")["Valor"]
+    .sum()
+    .reset_index()
+)
+
+fig2 = px.pie(
+    graf_regiao,
+    names="Regiao",
+    values="Valor",
+    title="Participação por Região"
+)
+
+st.plotly_chart(fig2, use_container_width=True)
+
+# Ranking de produtos
+st.subheader("🏆 Ranking de Produtos")
+
+ranking = (
+    df_filtrado.groupby("Produto")["Valor"]
+    .sum()
+    .sort_values(ascending=False)
+)
+
+st.dataframe(ranking)
+
+# Dados completos
+st.subheader("📋 Base de Dados")
+
+st.dataframe(df_filtrado)
