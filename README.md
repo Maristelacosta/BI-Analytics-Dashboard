@@ -55,6 +55,24 @@ O projeto utiliza Python, Pandas e Streamlit para análise, processamento e visu
 Acesse o dashboard pelo link publicado.
 
 ---
+ ---
+
+## 🏗️ Arquitetura da Solução
+
+```mermaid
+flowchart LR
+
+A[Base de Dados]
+--> B[Python]
+
+B --> C[Pandas]
+
+C --> D[Tratamento dos Dados]
+
+D --> E[Streamlit]
+
+E --> F[Dashboard Interativo]
+```
 
 ## 👩‍💻 Desenvolvido por
 
