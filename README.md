@@ -4,7 +4,7 @@
 
 Dashboard de Business Intelligence desenvolvido para análise de indicadores estratégicos e apoio à tomada de decisão orientada por dados.
 
-A solução utiliza Python, Pandas e Streamlit para coletar, processar e visualizar informações de forma intuitiva, permitindo acompanhar métricas de desempenho por meio de gráficos e indicadores interativos.
+A solução utiliza Python, Pandas e Streamlit para coleta, tratamento e visualização de dados, permitindo monitorar indicadores de desempenho por meio de dashboards, gráficos e métricas interativas.
 
 ---
 
@@ -83,18 +83,20 @@ Por meio de dashboards interativos, gestores podem acompanhar indicadores estrat
 
 ## 📊 Benefícios
 
-- Apoio à tomada de decisão.
+- Apoio à tomada de decisão baseada em dados.
 - Visualização rápida dos resultados.
-- Centralização das informações.
-- Acompanhamento de indicadores estratégicos.
-- Identificação de oportunidades de melhoria.
-- Redução do tempo de análise de dados.
+- Centralização das informações estratégicas.
+- Monitoramento contínuo de indicadores.
+- Identificação de tendências e oportunidades de melhoria.
+- Redução do tempo gasto em análises operacionais.
 
 ---
 
 ## 🚀 Demonstração
 
-A aplicação está disponível online para visualização dos dashboards e indicadores.
+A aplicação está disponível online para visualização dos dashboards, indicadores e análises interativas.
+
+🔗 Acesse a versão publicada pelo link disponível neste repositório.
 
 ---
 
@@ -105,8 +107,22 @@ A aplicação está disponível online para visualização dos dashboards e indi
 - Visualização de Dados
 - Indicadores de Desempenho (KPIs)
 - Tomada de Decisão Baseada em Dados
-- Tratamento e Limpeza de Dados
 - Storytelling com Dados
+- Tratamento e Limpeza de Dados
+- Dashboards Interativos
+
+---
+
+## 🏆 Competências Demonstradas
+
+- Business Intelligence
+- Análise de Dados
+- Visualização de Dados
+- Python para Análise de Dados
+- KPIs e Métricas de Negócio
+- Storytelling com Dados
+- Dashboards Interativos
+- Tomada de Decisão Baseada em Dados
 
 ---
 
