@@ -1,0 +1,11 @@
+Data,Produto,Categoria,Regiao,Quantidade,Valor
+2026-01-01,Notebook,Informática,Sul,5,25000
+2026-01-05,Mouse,Periférico,Sul,20,2000
+2026-01-10,Teclado,Periférico,Nordeste,15,3000
+2026-02-01,Monitor,Informática,Sudeste,10,8000
+2026-02-05,Notebook,Informática,Norte,4,20000
+2026-03-01,Mouse,Periférico,Sudeste,25,2500
+2026-03-10,Monitor,Informática,Sul,12,9600
+2026-04-01,Notebook,Informática,Nordeste,6,30000
+2026-04-10,Teclado,Periférico,Sul,18,3600
+2026-05-01,Monitor,Informática,Norte,8,6400
