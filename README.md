@@ -4,8 +4,7 @@
 
 Dashboard de Business Intelligence desenvolvido para análise de indicadores estratégicos e apoio à tomada de decisão orientada por dados.
 
-A solução utiliza Python, Pandas e Streamlit para coleta, tratamento e visualização de dados, permitindo monitorar indicadores de desempenho por meio de dashboards, gráficos e métricas interativas.
-
+Utiliza solução Python, Pandas e Streamlit para coleta, tratamento e visualização de dados, permitindo monitorar indicadores de desempenho por meio de dashboards, gráficos e atualizações interativas.
 ---
 
 ## 🎯 Objetivos
