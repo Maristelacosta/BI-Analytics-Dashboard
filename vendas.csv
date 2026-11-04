@@ -9,3 +9,29 @@ Data,Produto,Categoria,Regiao,Quantidade,Valor
 2026-04-01,Notebook,Informática,Nordeste,6,30000
 2026-04-10,Teclado,Periférico,Sul,18,3600
 2026-05-01,Monitor,Informática,Norte,8,6400
+
+st.sidebar.header("🔎 Filtros")
+
+regioes = st.sidebar.multiselect(
+    "Região",
+    options=sorted(df["Regiao"].unique()),
+    default=sorted(df["Regiao"].unique())
+)
+
+categorias = st.sidebar.multiselect(
+    "Categoria",
+    options=sorted(df["Categoria"].unique()),
+    default=sorted(df["Categoria"].unique())
+)
+
+produtos = st.sidebar.multiselect(
+    "Produto",
+    options=sorted(df["Produto"].unique()),
+    default=sorted(df["Produto"].unique())
+)
+
+df_filtrado = df[
+    (df["Regiao"].isin(regioes))
+    & (df["Categoria"].isin(categorias))
+    & (df["Produto"].isin(produtos))
+]
